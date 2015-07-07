@@ -1,0 +1,19 @@
+{
+  "name": "mpb_5yrs",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.30",
+    "moment": "^2.10.3",
+    "sqlite3": "^3.0.8",
+    "xlsjs": "^0.7.5"
+  }
+}

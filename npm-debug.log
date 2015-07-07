@@ -1,0 +1,66 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'sqlite3',
+1 verbose cli   '-save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose cache add [ 'sqlite3', null ]
+6 verbose cache add name=undefined spec="sqlite3" args=["sqlite3",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'sqlite3',
+7 verbose parsed url   path: 'sqlite3',
+7 verbose parsed url   href: 'sqlite3' }
+8 silly lockFile b54e393c-sqlite3 sqlite3
+9 verbose lock sqlite3 C:\Users\Tarun Paliwal\AppData\Roaming\npm-cache\b54e393c-sqlite3.lock
+10 silly lockFile b54e393c-sqlite3 sqlite3
+11 silly lockFile b54e393c-sqlite3 sqlite3
+12 verbose addNamed [ 'sqlite3', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile b9879749-sqlite3 sqlite3@
+15 verbose lock sqlite3@ C:\Users\Tarun Paliwal\AppData\Roaming\npm-cache\b9879749-sqlite3.lock
+16 silly addNameRange { name: 'sqlite3', range: '*', hasData: false }
+17 verbose request where is /sqlite3
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 56da67c802a490c4
+20 verbose url raw /sqlite3
+21 verbose url resolving [ 'https://registry.npmjs.org/', './sqlite3' ]
+22 verbose url resolved https://registry.npmjs.org/sqlite3
+23 verbose request where is https://registry.npmjs.org/sqlite3
+24 info trying registry request attempt 1 at 00:08:38
+25 http GET https://registry.npmjs.org/sqlite3
+26 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+27 info trying registry request attempt 2 at 00:08:48
+28 http GET https://registry.npmjs.org/sqlite3
+29 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+30 info trying registry request attempt 3 at 00:09:48
+31 http GET https://registry.npmjs.org/sqlite3
+32 silly lockFile b9879749-sqlite3 sqlite3@
+33 silly lockFile b9879749-sqlite3 sqlite3@
+34 error network getaddrinfo ENOTFOUND
+34 error network This is most likely not a problem with npm itself
+34 error network and is related to network connectivity.
+34 error network In most cases you are behind a proxy or have bad network settings.
+34 error network
+34 error network If you are behind a proxy, please make sure that the
+34 error network 'proxy' config is set properly.  See: 'npm help config'
+35 error System Windows_NT 6.2.9200
+36 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "sqlite3" "-save"
+37 error cwd E:\work\5yr_Budget-19-20\upload
+38 error node -v v0.10.33
+39 error npm -v 1.4.28
+40 error syscall getaddrinfo
+41 error code ENOTFOUND
+42 error errno ENOTFOUND
+43 verbose exit [ 1, true ]
