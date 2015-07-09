@@ -8,8 +8,8 @@ var dbHeaders = ['YEAR', 'UNIT', 'DCD', 'SAN'];
 
 var db_config = {
 
-	//  	path: '/home/shadowfox/Desktop/umrer_stage_ii/backup_2015_03_07'
-	path: "E:\\work\\5yr_Budget-19-20\\upload\\mines"
+	  	path: '/home/shadowfox/Desktop/Work/MPB_15-2020/github/mines'
+	// path: "E:\\work\\5yr_Budget-19-20\\upload\\mines"
 };
 
 var err = [];
