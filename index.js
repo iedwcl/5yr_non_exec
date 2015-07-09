@@ -175,16 +175,18 @@ var resetSanc = function(obj) {
 						success: false,
 						err: err
 					});
-
-				resolve(sendResults([result]));
+resolve(sendResults([result]));
+				
 			});
 			stmt.finalize();
+			
 		});
 		//db.close();
 	});
+	return p;
 }
 
-resetSanc(areaCode);
+
 
 
 // inserting records
@@ -200,7 +202,7 @@ var cb = function(err, result) {
 
 //var stmt = db.prepare("Insert or replace into sanc values ( ?,?,?,?)");
 var q="Insert or replace into sanc values ( ?,?,?,?)";
- db.on('trace', console.info);
+  db.on('trace', console.info);
 db.serialize(function() {
 	obj.forEach(function(item, idx) {
 		row_num = item.row_1;
@@ -230,4 +232,6 @@ db.serialize(function() {
 });
 };
 
-insertInSanc(dataJson);
+resetSanc(areaCode).then(function(){
+insertInSanc(dataJson);	
+});
