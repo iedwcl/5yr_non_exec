@@ -200,8 +200,8 @@ var cb = function(err, result) {
 	console.log("err@", err, result);
 };
 
-//var stmt = db.prepare("Insert or replace into sanc values ( ?,?,?,?)");
-var q="Insert or replace into sanc values ( ?,?,?,?)";
+var stmt = db.prepare("Insert or replace into sanc values ( ?,?,?,?)");
+//var q="Insert or replace into sanc values ( ?,?,?,?)";
   db.on('trace', console.info);
 db.serialize(function() {
 	obj.forEach(function(item, idx) {
@@ -211,23 +211,24 @@ db.serialize(function() {
 		// console.log('inserting record :',item,(+item['2016'])>0);
 
 		if ((+item['2016'])>0) {
-			db.run(q,[2016, item.UNIT, item.DCD, +(item['2016'])], cb);
+			stmt.run([2016, item.UNIT, item.DCD, +(item['2016'])], cb);
 			//stmt.finalize();
 		}
 		if ((+item['2017'])>0) {
-			db.run(q,[2017, item.UNIT,item.DCD, +(item['2017'])], cb);
+			stmt.run([2017, item.UNIT,item.DCD, +(item['2017'])], cb);
 			//stmt.finalize();
 		}
 		if ((+item['2018'])>0) {
-			db.run(q,[2018, item.UNIT, item.DCD, +(item['2018'])], cb);
+			stmt.run([2018, item.UNIT, item.DCD, +(item['2018'])], cb);
 			//stmt.finalize();
 		}
 		if ((+item['2019'])>0) {
-			db.run(q,[2019, item.UNIT, item.DCD, +(item['2019'])], cb);
-			//stmt.finalize();
+			stmt.run([2019, item.UNIT, item.DCD, +(item['2019'])], cb);
+			//
 		}
-
-	})
+//
+	});
+	stmt.finalize();
 
 });
 };
