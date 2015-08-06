@@ -39,7 +39,7 @@ a.area,e.ucde,u.name,
   FROM unit u 
    left join area a on  cast(substr(u.code, 2, 2 ) as INT)=a. code
    left join employee e on u.code = e.ucde
-   left join (select sum(san_f+san_m) san, unit, substr(sanc.dscd,3,5) dcd from  sanc where substr(sanc.dscd,3,5)=${dcd}  group by unit, substr(sanc.dscd,3,5)) s on s.dcd= substr(desg,3,5) and s.unit=e.ucde
+   left join (select sum(san_f+san_m) san, unit, substr(sanc.dscd,3,5) dcd from  sanc where substr(sanc.dscd,3,5)=${dcd}  group by unit, substr(sanc.dscd,3,5)) s on a.unit=e.ucde
  WHERE e.isUpdated = &apos;Y&apos; 
        AND
        e.inService = &apos;W&apos; 
